@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+* {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #2B2C33;
+}
+
+.container {
+    width: 1280px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+p {
+    color: #D9D9D9;
+    display: inline;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    color: black;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: 36px;
+    color: black;
+}
+
+
+/*-----------------Input-------------------*/
+
+.input {
+    margin-bottom: 30px;
+}
+
+.input p {
+    color: #D9D9D9;
+    font-size: 2rem;
+}
+
+.input input {
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+
+
+/*--------------------Button-----------------*/
+
+#play-pause-button {
+    display: inline;
+    width: 30px;
+    height: 30px;
+    margin: 15px 20px 0 0;
+    border: 0;
+    background-image: url("../img/play-button.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+#restart-button {
+    display: inline;
+    width: 30px;
+    height: 30px;
+    margin: 15px 20px 0 0;
+    border: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.playButtonActive {
+    background-position: bottom !important;
+}
+
+#play-pause-button:active {
+    border: 0;
+}
+
+#play-pause-button:focus {
+    outline: none;
+}
+
+/*---------------credit---------------*/
+
+.credit {
+    margin-top: 15px;
+}
+
+/*----------------Video and Super----------*/
+
+.col-md-6 {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+
+.outer {
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+/*    transform: scale(0.75);*/
+}
+
+.super-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 640px;
+    height: 245px;
+    visibility: hidden;
+}
+
+.super-bg {
+    position: absolute;
+    clip: rect(0px 600px 140px -30px);
+    border-radius: 0;
+    top: 72%;
+    left: 69px;
+    min-width: 15%;
+    height: 20%;
+    padding: 0 20px 0 13px;
+}
+
+.super-bg {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 8px solid black;
+    height: 140px;
+    top: 40px;
+    padding-left: 40px;
+    padding-right: 60px;
+    min-height: 140px;
+    min-width: 140px;
+}
+
+.fashionista-rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    top: 68px;
+    left: 30px;
+    height: 85px;
+    width: 85px;
+    z-index: 2;
+    transform: rotate(45deg);
+}
+
+.fashionista-inner-rectangle-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transform-origin: center;
+    top: 130px;
+    left: 130px;
+    height: 50px;
+    width: 50px;
+}
+
+.fashionista-inner-rectangle-2 {
+    background-color: black;
+    transform-origin: center;
+    top: 150px;
+    left: 150px;
+    height: 20px;
+    width: 20px;
+}
+
+.super-headline {
+    font-size: 1px;
+    margin-top: 25px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.super-subtitle {
+    font-size: 1px;
+    margin-top: 12px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.font-large {
+    font-size: 28px;
+}
