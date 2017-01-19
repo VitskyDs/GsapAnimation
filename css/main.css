@@ -92,13 +92,22 @@ h2 {
     outline: none;
 }
 
+
 /*---------------credit---------------*/
 
 .credit {
     margin-top: 15px;
 }
 
+
 /*----------------Video and Super----------*/
+
+#video {
+    background-image: url(/img/poster.png);
+    background-size: cover;
+    height: 720px;
+    width: 1280px;
+}
 
 .col-md-6 {
     padding: 0;
@@ -110,7 +119,7 @@ h2 {
     position: relative;
     overflow: hidden;
     line-height: 0;
-/*    transform: scale(0.75);*/
+    /*    transform: scale(0.75);*/
 }
 
 .super-container {
@@ -142,6 +151,7 @@ h2 {
     padding-right: 60px;
     min-height: 140px;
     min-width: 140px;
+    visibility: hidden;
 }
 
 .fashionista-rectangle {

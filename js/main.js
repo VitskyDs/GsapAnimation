@@ -1,29 +1,29 @@
-var userHeadline = "Your headline goes here",
-    userSubtitle = "Your subtitle goes here",
-    tmln = new TimelineMax(),
-    superContainer = $(".super-container"),
-    superBg = $(".super-bg"),
-    superText = $(".super-text"),
-    playPauseBtn = $("#play-pause-button"),
-    restartBtn = $("#restart-button");
-
-//set text
+var userHeadline = "Your headline goes here"
+    , userSubtitle = "Your subtitle goes here"
+    , superContainer = $(".super-container")
+    , superBg = $(".super-bg")
+    , superText = $(".super-text")
+    , playPauseBtn = $("#play-pause-button")
+    , restartBtn = $("#restart-button");
+var reverse = function () {
+        tmln.reverse();
+    }
+    //set text
 document.getElementById("super-headline").innerHTML = userHeadline;
 document.getElementById("super-subtitle").innerHTML = userSubtitle;
-
 //change text
 $("#userHeadline").keyup(function () {
     userHeadline = this.value;
     document.getElementById("super-headline").innerHTML = userHeadline;
 });
-
 $("#userSubTitle").keyup(function () {
     userSubtitle = this.value;
     document.getElementById("super-subtitle").innerHTML = userSubtitle;
 });
-
 //button
 playPauseBtn.on('click', function (e) {
+    document.getElementById("super-headline").innerHTML = userHeadline;
+    document.getElementById("super-subtitle").innerHTML = userSubtitle;
     //  play button class toggle
     $(this).toggleClass("playButtonActive");
     e.preventDefault();
@@ -31,66 +31,29 @@ playPauseBtn.on('click', function (e) {
     video.paused ? video.play() : video.pause();
     tmln.paused(!tmln.paused())
 });
-
-restartBtn.on('click', function (e){
-    e.preventDefault();
-    tmln.restart();
-})
-
-//animation functions and eases
-
+restartBtn.on('click', function (e) {
+        e.preventDefault();
+        tmln.restart();
+        video.currentTime = 0;
+        video.play();
+    })
+    //delay function
 TimelineLite.prototype.addDelay = function (delay, position) {
-	var delayAttr;
-	if(typeof delay === 'undefined' || isNaN(delay)){
-		return this;//skip if invalid parameters
-	}
-	if (typeof position === 'undefined') {
-		delayAttr = '+=' + delay; //add delay at the end of the timeline
-	} else if (typeof position === 'string') {
-		delayAttr = position + '+=' + delay; //add delay after label
-	} else if(!isNaN(position)) {
-		delayAttr = delay + position; //if they're both numbers, assume absolute position
-	} else {
-		return this; //nothing done
-	}
-
-	return this.set({}, {}, delayAttr);
+    var delayAttr;
+    if (typeof delay === 'undefined' || isNaN(delay)) {
+        return this; //skip if invalid parameters
+    }
+    if (typeof position === 'undefined') {
+        delayAttr = '+=' + delay; //add delay at the end of the timeline
+    }
+    else if (typeof position === 'string') {
+        delayAttr = position + '+=' + delay; //add delay after label
+    }
+    else if (!isNaN(position)) {
+        delayAttr = delay + position; //if they're both numbers, assume absolute position
+    }
+    else {
+        return this; //nothing done
+    }
+    return this.set({}, {}, delayAttr);
 };
-
-var reverse = function (){
-    tmln.reverse();
-}
-
-CustomEase.create("rectangleLeft","M0,0 C0.078,0.004 0.148,-0.1 0.2,-0.1 0.41,-0.1 0.559,0.602 0.598,0.779 0.656,1.034 0.938,0.998 1,1");
-
-//animation
-tmln.paused(true);
-
-tmln.addLabel("start", "0").addLabel("middle", "+0.9").addLabel("text", "+1.5").addLabel("end", "+5")
-    .set(superContainer, {autoAlpha:1}).set(superText, {autoAlpha: 1})
-    //retangles grow
-    .fromTo(superBg , 0.5, {scale:0, rotation: 45, x:255}, {scale: 0.8, ease: Back.easeOut.config(1.3)},"start")
-    .fromTo(".fashionista-rectangle", 0.5,{scale: 0, x:320}, {scale: 0.5, ease: Back.easeOut.config(1.3)},"start+=0.1")
-    .fromTo(".fashionista-inner-rectangle-1", 0.5, {scale:0}, {scale: 1, ease: Back.easeOut.config(1.3)}, "start+=0.2")
-    .fromTo(".fashionista-inner-rectangle-2", 0.5, {scale:0}, {scale: 1, ease: Back.easeOut.config(1.3)}, "start+=0.3")
-    //retangles go left
-        //rotate
-    .fromTo(superBg, 0.5,{rotation: -45}, {rotation: 0, ease:"rectangleLeft"}, "middle-=0.2")
-    .fromTo(".fashionista-rectangle", 0.5,{rotation: 45}, {rotation: 135, ease:"rectangleLeft"}, "middle-=0.2")
-        //go left
-    .fromTo(superBg, 0.5,{x:255, scale:0.8}, {x:0, scale:1, ease:Circ.easeInOut}, "middle")
-    .fromTo(".fashionista-rectangle", 0.5,{ x:320 , scale:0.5}, {x: 1, scale:1, ease:Circ.easeInOut}, "middle")
-    //super enlarges
-    .to(".super-headline, .super-subtitle",0.5, {className:"+=font-large", ease: Circ.easeInOut}, "-=0.3")
-    //text enters
-    .fromTo(".super-headline", 0.5, {y:-200, x:25}, {y:0, ease:Back.easeOut.config(1)}, "text")
-    .fromTo(".super-subtitle", 0.5, {y:200, x:25}, {y:0, ease:Back.easeOut.config(1.2)}, "text+=0.2")
-    //reverse
-    .addDelay(1)
-    .to(superBg,0,{x:0, onComplete:reverse})
-    ;
-
-//ease: Back.easeIn.config(1.4)
-
-/*    .fromTo(superBg, 0.5,{x:255, rotation: 45, scale:0.8}, {x:0, rotation: 0,scale:1, ease:"rectangleLeft"}, "middle")
-    .fromTo(".fashionista-rectangle", 0.5,{ x:320 , rotation: 45, scale:0.5}, {x: 1, rotation: -135,scale:1, ease:"rectangleLeft"}, "middle")*/
