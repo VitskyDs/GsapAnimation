@@ -1,11 +1,9 @@
 var tmln = new TimelineMax();
 var preTmln = new TimelineMax();
+
 //animation functions and eases
 
-
 CustomEase.create("rectangleLeft","M0,0 C0.078,0.004 0.148,-0.1 0.2,-0.1 0.41,-0.1 0.559,0.602 0.598,0.779 0.656,1.034 0.938,0.998 1,1");
-
-
 
 //animation
 
@@ -14,9 +12,9 @@ CustomEase.create("rectangleLeft","M0,0 C0.078,0.004 0.148,-0.1 0.2,-0.1 0.41,-0
 tmln.paused(true);
 
 tmln.addLabel("start", "0").addLabel("middle", "+0.9").addLabel("text", "+1.5")
-    .set(superBg, {scale:0, autoAlpha:1}).set(superContainer, {autoAlpha:1})
+    .to(superContainer, 0.001,{autoAlpha:1, delay: 0.1})
     //retangles grow
-    .fromTo(superBg , 0.5, {scale:0, rotation: 45, x:255}, {scale: 0.8, ease: Back.easeOut.config(1.3)},"start")
+    .fromTo(superBg , 0.5, {scale:0, rotation: 45, x:255, delay:0.5}, {scale: 0.8, ease: Back.easeOut.config(1.3)},"start")
     .fromTo(".fashionista-rectangle", 0.5,{scale: 0, x:320}, {scale: 0.5, ease: Back.easeOut.config(1.3)},"start+=0.1")
     .fromTo(".fashionista-inner-rectangle-1", 0.5, {scale:0}, {scale: 1, ease: Back.easeOut.config(1.3)}, "start+=0.2")
     .fromTo(".fashionista-inner-rectangle-2", 0.5, {scale:0}, {scale: 1, ease: Back.easeOut.config(1.3)}, "start+=0.3")

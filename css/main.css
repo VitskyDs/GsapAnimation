@@ -119,6 +119,7 @@ h2 {
     position: relative;
     overflow: hidden;
     line-height: 0;
+/*    zoom out    */
     /*    transform: scale(0.75);*/
 }
 
@@ -151,7 +152,6 @@ h2 {
     padding-right: 60px;
     min-height: 140px;
     min-width: 140px;
-    visibility: hidden;
 }
 
 .fashionista-rectangle {

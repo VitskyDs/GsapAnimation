@@ -8,10 +8,14 @@ var userHeadline = "Your headline goes here"
 var reverse = function () {
         tmln.reverse();
     }
-    //set text
+
+//set text
+
 document.getElementById("super-headline").innerHTML = userHeadline;
 document.getElementById("super-subtitle").innerHTML = userSubtitle;
+
 //change text
+
 $("#userHeadline").keyup(function () {
     userHeadline = this.value;
     document.getElementById("super-headline").innerHTML = userHeadline;
@@ -20,7 +24,9 @@ $("#userSubTitle").keyup(function () {
     userSubtitle = this.value;
     document.getElementById("super-subtitle").innerHTML = userSubtitle;
 });
+
 //button
+
 playPauseBtn.on('click', function (e) {
     document.getElementById("super-headline").innerHTML = userHeadline;
     document.getElementById("super-subtitle").innerHTML = userSubtitle;
@@ -31,13 +37,16 @@ playPauseBtn.on('click', function (e) {
     video.paused ? video.play() : video.pause();
     tmln.paused(!tmln.paused())
 });
+
 restartBtn.on('click', function (e) {
         e.preventDefault();
         tmln.restart();
         video.currentTime = 0;
         video.play();
     })
-    //delay function
+
+//delay function
+
 TimelineLite.prototype.addDelay = function (delay, position) {
     var delayAttr;
     if (typeof delay === 'undefined' || isNaN(delay)) {
