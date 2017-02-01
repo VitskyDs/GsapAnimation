@@ -1,0 +1,47 @@
+.super-container {
+    position: absolute;
+    border: 1px;
+    bottom: 0;
+    left: 0;
+    width: 640px;
+    height: 245px;
+}
+
+.super-bg {
+    background-color: white;
+    height: 70px;
+    padding-left: 40px;
+    padding-right: 60px;
+    position: absolute;
+    clip: rect(0px 600px 140px -30px);
+    border-radius: 0;
+    bottom: 70px;
+    left: 95px;
+    padding: 0 20px 0 40px;
+    min-height: 70px;
+    min-width: 340px;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
+
+
+.super-headline {
+    font-size: 26px;
+    margin-top: 25px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.super-subtitle {
+    font-size: 1px;
+    margin-top: 12px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.font-large {
+    font-size: 28px;
+}
