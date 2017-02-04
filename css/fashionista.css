@@ -1,0 +1,87 @@
+.super-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 640px;
+    height: 245px;
+    visibility: hidden;
+}
+
+.super-bg {
+    position: absolute;
+    clip: rect(0px 600px 140px -30px);
+    border-radius: 0;
+    top: 72%;
+    left: 69px;
+    min-width: 15%;
+    height: 20%;
+    padding: 0 20px 0 13px;
+}
+
+.super-bg {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 8px solid black;
+    height: 140px;
+    top: 40px;
+    padding-left: 40px;
+    padding-right: 60px;
+    min-height: 140px;
+    min-width: 140px;
+}
+
+.fashionista-rectangle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    top: 68px;
+    left: 30px;
+    height: 85px;
+    width: 85px;
+    z-index: 2;
+    transform: rotate(45deg);
+}
+
+.fashionista-inner-rectangle-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transform-origin: center;
+    top: 130px;
+    left: 130px;
+    height: 50px;
+    width: 50px;
+}
+
+.fashionista-inner-rectangle-2 {
+    background-color: black;
+    transform-origin: center;
+    top: 150px;
+    left: 150px;
+    height: 20px;
+    width: 20px;
+}
+
+.super-headline {
+    font-size: 1px;
+    margin-top: 25px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.super-subtitle {
+    font-size: 1px;
+    margin-top: 12px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+.font-large {
+    font-size: 28px;
+}
