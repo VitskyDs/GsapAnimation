@@ -35,7 +35,3 @@ tmln.addLabel("start", "0").addLabel("middle", "+0.9").addLabel("text", "+1.5")
     .to(superBg,0,{x:0, onComplete:reverse})
     ;
 
-//ease: Back.easeIn.config(1.4)
-
-/*    .fromTo(superBg, 0.5,{x:255, rotation: 45, scale:0.8}, {x:0, rotation: 0,scale:1, ease:"rectangleLeft"}, "middle")
-    .fromTo(".fashionista-rectangle", 0.5,{ x:320 , rotation: 45, scale:0.5}, {x: 1, rotation: -135,scale:1, ease:"rectangleLeft"}, "middle")*/
