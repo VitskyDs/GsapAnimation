@@ -61,7 +61,7 @@ h2 {
     display: inline;
     width: 30px;
     height: 30px;
-    margin: 15px 20px 0 0;
+    margin: 15px 10px 0 0;
     border: 0;
     background-image: url("../img/play-button.svg");
     background-repeat: no-repeat;
@@ -73,7 +73,7 @@ h2 {
     display: inline;
     width: 30px;
     height: 30px;
-    margin: 15px 20px 0 0;
+    margin: 15px 10px 0 0;
     border: 0;
     background-repeat: no-repeat;
     background-size: cover;

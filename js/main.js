@@ -38,6 +38,13 @@ playPauseBtn.on('click', function (e) {
     tmln.paused(!tmln.paused())
 });
 
+document.onkeypress = function (e) {
+    if ((e || window.event).keyCode === 32) {
+        video.paused ? video.play() : video.pause();
+        tmln.paused(!tmln.paused());
+    }
+};
+
 restartBtn.on('click', function (e) {
         e.preventDefault();
         tmln.restart();
