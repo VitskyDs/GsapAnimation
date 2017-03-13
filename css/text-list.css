@@ -1,0 +1,52 @@
+h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-size: 27px;
+    text-transform: none;
+}
+
+.outer {
+    zoom: 0.66;
+}
+
+.user-input {
+    padding-right: 40px;
+}
+
+form {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.theme-selection {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-end
+}
+
+.theme-btn {
+    background-color: white;
+    border: 1px solid green;
+    width: 20%;
+}
+
+.theme-btn:nth-child(1) {
+    border-color: green;
+}
+
+.theme-btn:nth-child(2) {
+    border-color: red;
+}
+
+.theme-btn:nth-child(3) {
+    border-color: pink;
+}
+
+.theme-btn:nth-child(4) {
+    border-color: azure;;
+}
