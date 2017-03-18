@@ -8,16 +8,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-    </style>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/the-voice.css">
     <link rel="stylesheet" href="css/text-list.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,600i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700" rel="stylesheet">
@@ -34,30 +28,32 @@
             <div class="user-input col-md-4">
                 <h2>Add 1-5 items</h2>
                 <form>
-                    <input id="item-1" type="text" name="userHeadline" maxlength="40" placeholder="#01 item">
+                    <input id="input-1" type="text" name="item-1" maxlength="40" placeholder="#01 item">
                     <br>
-                    <input id="item-2" type="text" name="userSubTitle" maxlength="40" placeholder="#02 item">
+                    <input id="input-2" type="text" name="item-2" maxlength="40" placeholder="#02 item">
                     <br>
-                    <input id="item-3" type="text" name="userSubTitle" maxlength="40" placeholder="#03 item">
+                    <input id="input-3" type="text" name="item-3" maxlength="40" placeholder="#03 item">
                     <br>
-                    <input id="item-4" type="text" name="userSubTitle" maxlength="40" placeholder="#04 item">
+                    <input id="input-4" type="text" name="item-4" maxlength="40" placeholder="#04 item">
                     <br>
-                    <input id="item-5" type="text" name="userSubTitle" maxlength="40" placeholder="#05 item"> </form>
-                    <div class="theme-selection"><div class="theme-btn">smooth</div>
+                    <input id="input-5" type="text" name="item-5" maxlength="40" placeholder="#05 item"> </form>
+                <div class="theme-selection">
                     <div class="theme-btn">smooth</div>
-                    <div class="theme-btn">smooth</div>
-                    <div class="theme-btn">smooth</div></div>
-
+                    <div class="theme-btn">Rough</div>
+                    <div class="theme-btn">Slick</div>
+                    <div class="theme-btn">Edgy</div>
+                </div>
             </div>
+            <!--      Video Container      -->
             <div class="col-md-8">
                 <div class="outer">
+                    <div id="flah-1" class="flah"><div class="bullet"></div><div class="text" id="text-1"></div></div>
+                    <div id="flah-2" class="flah auto-alpha-off"><div class="bullet"></div><div class="text" id="text-1"></div></div>
+                    <div id="flah-3" class="flah auto-alpha-off"><div class="bullet"></div><div class="text" id="text-1"></div></div>
+                    <div id="flah-4" class="flah auto-alpha-off"><div class="bullet"></div><div class="text" id="text-1"></div></div>
+                    <div id="flah-5" class="flah auto-alpha-off"><div class="bullet"></div><div class="text" id="text-1"></div></div>
                     <video id="video" width="100%" height="auto">
                         <source src="img/VanDamme.mp4" type="video/mp4"> </video>
-                    <div class="super-bg flah">
-                        <div class="super-text">
-                            <h1 id="super-headline" class="super-headline"></h1>
-                            <h2 id="super-subtitle" class="super-subtitle"></h2></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -71,14 +67,11 @@
     </main>
     <!-- /container -->
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/TweenMax.js"></script>
     <script src="js/vendor/CustomEase.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/the-voice.js"></script>
+    <script src="js/basis.js"></script>
+    <script src="js/text-list.js"></script>
 </body>
 
 </html>

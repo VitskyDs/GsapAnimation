@@ -1,13 +1,24 @@
+body {
+    padding: 30px 0;
+}
+
 h2 {
     font-family: 'Titillium Web', sans-serif;
     color: white;
     font-size: 27px;
     text-transform: none;
+    margin-bottom: 20px;
 }
 
 .outer {
     zoom: 0.66;
 }
+
+
+
+
+
+/*  UI  */
 
 .user-input {
     padding-right: 40px;
@@ -15,10 +26,12 @@ h2 {
 
 form {
     font-family: 'Titillium Web', sans-serif;
+    margin-bottom: 10px;
 }
 
 input {
     width: 100%;
+    padding: 2px 7px;
     margin-bottom: 15px;
 }
 
@@ -48,5 +61,71 @@ input {
 }
 
 .theme-btn:nth-child(4) {
-    border-color: azure;;
+    border-color: azure;
+    ;
+}
+
+
+/*  text list  */
+
+.flah {
+    overflow: hidden;
+    /*position*/
+    display: inline-block;
+    position: absolute;
+    /*size*/
+    height: 80px;
+    max-width: 520px;
+    padding: 15px 30px 15px 65px;
+    /*customize*/
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+}
+
+.bullet {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 23px;
+    line-height: 28px;
+    color: black;
+}
+
+.flah:nth-child(1) {
+    top: 80px;
+    left: 30px;
+}
+
+.flah:nth-child(2) {
+    top: 200px;
+    left: 30px;
+}
+
+.flah:nth-child(3) {
+    top: 320px;
+    left: 30px;
+}
+
+.flah:nth-child(4) {
+    top: 440px;
+    left: 30px;
+}
+
+.flah:nth-child(5) {
+    top: 560px;
+    left: 30px;
+}
+
+/* Hide Elements */
+
+.auto-alpha-off {
+    display: none;
 }

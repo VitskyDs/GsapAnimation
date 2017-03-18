@@ -1,29 +1,6 @@
-var userHeadline = "Your headline goes here"
-    , userSubtitle = "Your subtitle goes here"
-    , superContainer = $(".super-container")
-    , superBg = $(".super-bg")
-    , superText = $(".super-text")
+var superContainer = $(".super-container")
     , playPauseBtn = $("#play-pause-button")
     , restartBtn = $("#restart-button");
-var reverse = function () {
-        tmln.reverse();
-    }
-
-//set text
-
-document.getElementById("super-headline").innerHTML = userHeadline;
-document.getElementById("super-subtitle").innerHTML = userSubtitle;
-
-//change text
-
-$("#userHeadline").keyup(function () {
-    userHeadline = this.value;
-    document.getElementById("super-headline").innerHTML = userHeadline;
-});
-$("#userSubTitle").keyup(function () {
-    userSubtitle = this.value;
-    document.getElementById("super-subtitle").innerHTML = userSubtitle;
-});
 
 //buttons
 
@@ -31,7 +8,7 @@ playPauseBtn.on('click', function (e) {
     //  play button class toggle
     $(this).toggleClass("playButtonActive");
     e.preventDefault();
-    //  play pause function 
+    //  play pause function
     video.paused ? video.play() : video.pause();
     tmln.paused(!tmln.paused())
 });
@@ -48,7 +25,6 @@ document.onkeypress = function (e) {
         video.paused ? video.play() : video.pause();
         tmln.paused(!tmln.paused());
     }
-
 };
 
 //delay function
